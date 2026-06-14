@@ -1,160 +1,136 @@
-# 🪑 Меблерія
+# 🪑 Mebleria
 
-## 📖 Опис проєкту
+Mebleria is a responsive furniture store web app built as a JavaScript team
+project.
 
-**Меблерія** — це сучасний вебдодаток для вибору та замовлення меблів.  
-Проєкт створено для демонстрації роботи з **REST API**, реалізації **адаптивного
-дизайну**, **модальних вікон**, **динамічного рендерингу карток**,
-**фільтрації** та **пагінації**.
+The project demonstrates working with a REST API, dynamic product rendering,
+category filtering, pagination, modal windows, sliders, form validation, and
+responsive UI.
 
-Користувачі можуть:
-
-- Переглядати меблі з бази даних;
-- Фільтрувати їх за категоріями;
-- Переглядати детальну інформацію про товар;
-- Замовляти меблі через форму зворотного зв’язку;
-- Переглядати відгуки клієнтів та інформацію про компанію.
+**Live site:** https://alisapagan.github.io/mebleria/ **API docs:**
+https://furniture-store-v2.b.goit.study/api-docs/ **Figma design:**
+https://www.figma.com/design/xmuUuDiEAbT0mjmpgzPrc0/%D0%9C%D0%B5%D0%B1%D0%BB%D0%B5%D1%80%D1%96%D1%8F?node-id=5999-10563
 
 ---
 
-## 🌐 Макет і API
+## Features
 
-- **Макет Figma:**  
-  [Меблерія — дизайн](https://www.figma.com/design/xmuUuDiEAbT0mjmpgzPrc0/%D0%9C%D0%B5%D0%B1%D0%BB%D0%B5%D1%80%D1%96%D1%8F?node-id=5999-10563)
-
-- **Бекенд (API):**  
-  [Furniture Store API v2](https://furniture-store-v2.b.goit.study/api-docs/)
-
----
-
-## ⚙️ Використані технології
-
-- **HTML5** — семантична структура сторінок
-- **CSS3 / SCSS** — стилізація, адаптивність, retina-зображення
-- **JavaScript (ES6+)** — логіка додатку, обробка подій, API-запити
-- **Async/Await** — робота з асинхронними запитами
-- **Бібліотеки:**
-  - [iziToast](https://izitoast.marcelodolce.com) — сповіщення про події
-  - [Swiper.js](https://swiperjs.com) — слайдер для відгуків
-  - [Accordion.js](https://github.com/michu2k/Accordion) — FAQ акордеон
-  - [Raty.js](https://github.com/wbotelhos/raty) — відображення рейтингу
+- Furniture catalog loaded from a REST API
+- Category filtering
+- “Show more” pagination
+- Product details modal
+- Popular products slider
+- Customer feedback slider
+- FAQ accordion
+- Order form with validation
+- Toast notifications for user actions and errors
+- Responsive layout for mobile, tablet, and desktop
+- Retina-ready images
 
 ---
 
-## 📱 Адаптивність
+## My Role
 
-Верстка адаптивна під такі розміри:
+**Role:** Scrum Master, Front-End Developer
 
-- **Mobile:** 375px+
-- **Tablet:** 768px+
-- **Desktop:** 1440px+
+My contributions included:
 
----
-
-## 🚀 Основний функціонал
-
-### 🔹 Header
-
-- Логотип, меню навігації, бургер-меню;
-- Плавний перехід до секцій;
-- Блокування скролу при відкритому меню.
-
-### 🔹 Hero Section
-
-- Заголовок, підзаголовок, кнопка “Що про нас думають” (якір до відгуків).
-
-### 🔹 Furniture List
-
-- Отримання меблів із бекенду `/furniture`;
-- Показ 8 карток при старті;
-- Фільтрація за категоріями `/categories`;
-- Кнопка **“Показати ще”** для пагінації;
-- Модальне вікно **“Детальніше”** з інформацією про меблі;
-- Відображення назви, кольору, ціни, рейтингу.
-
-### 🔹 About Us
-
-- Зображення, заголовок і текст про компанію.
-
-### 🔹 Popular Products Section (“Популярні товари”)
-
--  Отримання списку популярних товарів із бекенду `/furniture?type=popular`;
--  Навігаційні кнопки та пагінація;
--  Модальне вікно **“Детальніше”** з інформацією про меблі та з подальшим перходом до форми замовлення;
--  Реалізація через **Swiper.js**.
-
-### 🔹 FAQ Section
-
-- Акордеон зі списком запитань/відповідей.
-
-### 🔹 Feedback Section
-
-- Слайдер відгуків користувачів `/feedbacks`;
-- Оцінки “зірочками”, навігаційні кнопки, пагінація;
-- Реалізація через **Swiper.js**.
-
-### 🔹 Модальні вікна
-
-#### Деталі меблів:
-
-- Галерея зображень, опис, ціна, розміри, кольори;
-- Кнопка “Перейти до замовлення”.
-
-#### Форма замовлення:
-
-- Поля: ім’я, телефон, коментар;
-- POST-запит `/orders` з даними користувача;
-- Валідація форми та сповіщення про результат через iziToast.
-
-### 🔹 Footer
-
-- Логотип, навігація, соцмережі (YouTube, Instagram, Facebook);
-- Посилання відкриваються у новій вкладці з `rel="noopener noreferrer"`.
+- Organized team workflow, communication, and task coordination as Scrum Master
+- Worked on responsive header and burger menu behavior
+- Implemented popup/modal logic
+- Added anchor navigation and section scrolling behavior
+- Helped with UI fixes, layout cleanup, and bug fixing
+- Worked on image optimization and responsive polish
+- Supported final project cleanup and presentation readiness
 
 ---
 
-## 🧠 Оптимізація та UX
+## Tech Stack
 
-- Курсор змінюється при наведенні на клікабельні елементи;
-- Відсутні непередбачені помилки в консолі;
-- Всі зображення оптимізовані для **Retina (2x)**;
-- Під час запитів показується **лоадер**;
-- Помилки запитів обробляються і виводяться через **iziToast**.
-
----
-
-## 📦 Деплой
-
-Сайт задеплоєно на **Github:**  
-🔗 [https://alinaslp.github.io/QuantumJS/]
+- HTML5
+- CSS3 / SCSS
+- JavaScript ES6+
+- REST API
+- Async/Await
+- Swiper.js
+- iziToast
+- Accordion.js
+- Raty.js
+- Vite
 
 ---
 
-## 👨‍💻 Команда проєкту
+## Main Functionality
 
-Командна робота студентів курсу **Fullstack Developer (GoIT)**:
+### Header
 
-**Team lead:** Alina Slipenka
+- Logo and navigation menu
+- Burger menu for smaller screens
+- Smooth navigation to page sections
+- Scroll locking when the mobile menu is open
 
-**Scrum master:** Alisa Pagan
+### Furniture List
 
-**Developer 1:** Alina Yashchenko
+- Fetches furniture data from `/furniture`
+- Displays initial product cards
+- Filters products by category from `/categories`
+- Loads more products with pagination
+- Opens a product details modal
 
-**Developer 2:** Vitalii Ivashchenko
+### Popular Products
 
-**Developer 3:** Anastasiia Melnyk
+- Fetches popular products from `/furniture?type=popular`
+- Displays products in a Swiper slider
+- Opens product details modal
+- Allows moving from product details to the order form
 
-**Developer 4:** Dasha Kazarina
+### Feedback
 
-**Developer 5:** Tetiana Shcherbyna
+- Fetches customer feedback from `/feedbacks`
+- Displays feedback in a Swiper slider
+- Shows rating stars with Raty.js
 
-**Developer 6:** Tetiana Kovpak
+### Order Form
 
-**Developer 7:** Mykhailo Pyroh
+- Collects user name, phone, and comment
+- Sends order data with a POST request to `/orders`
+- Validates form input
+- Shows success/error notifications with iziToast
+
+### FAQ
+
+- Accordion section with common questions and answers
+
+### Footer
+
+- Logo, navigation, and social links
+- External links open in a new tab with `rel="noopener noreferrer"`
 
 ---
 
-## 🧾 Ліцензія
+## Run Locally
 
-Цей проєкт є навчальним і розповсюджується під ліцензією **MIT**.  
-Використання коду дозволене з посиланням на авторів та навчальний курс **GoIT**.
+```bash
+git clone https://github.com/AlisaPagan/mebleria.git
+cd mebleria
+npm install
+npm run dev
+npm run build
+```
+
+---
+
+## Team
+
+Team project built during the GoIT Full-Stack Developer course.
+
+Team Lead: Alina Slipenka Scrum Master: Alisa Pagan Developers: Alina
+Yashchenko, Vitalii Ivashchenko, Anastasiia Melnyk, Dasha Kazarina, Tetiana
+Shcherbyna, Tetiana Kovpak, Mykhailo Pyroh
+
+---
+
+## License
+
+This is an educational project created during the GoIT Full-Stack Developer
+course.
